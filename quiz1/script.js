@@ -4,7 +4,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
     const message = document.getElementById('popup-message');
 
     if (answer.trim().toLowerCase() === "loong") {  // Jawaban yang benar adalah "loong"
-        message.innerHTML = 'Benar! <br> <a href="https://link.dana.id/kaget?c=sltstrjpf&r=hYXSF6" target="_blank" class="btn btn-success mt-3">Lihat Selengkapnya</a>';
+        message.innerHTML = 'Benar! <br> <a href="https://link.dana.id/kaget?c=sltstrjpf&r=hYXSF6" target="_blank" class="btn btn-success mt-3">buruan klaim hadiahnya</a>';
         message.style.color = "green";
     } else {
         message.textContent = "Salah, coba lagi!";
