@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Scroll dengan Animasi</title>
+    <style>
+        /* Gaya dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+        .tiktok-icon {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+        .link-tiktok {
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+        .link-tiktok:hover {
+            color: #0088cc;
+        }
+        .keterangan {
+            font-size: 14px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .menu-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .menu-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .menu-list li {
+            padding: 15px 20px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .menu-list li:hover {
+            background-color: #0056b3;
+            transform: translateX(10px);
+        }
+
+        /* Scrollbar custom */
+        .menu-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .menu-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .menu-list::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        .menu-list::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #ffffff; /* Teks link tetap putih */
+            padding: 10px 20px;
+            display: inline-block;
+            background-color: #0088cc;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #005f99;
+            color: #ffffff; /* Tetap putih saat di-hover */
+        }
+        /* Animasi */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-list li {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daftar Menu</h1>
+    </header>
+    <div class="menu-container">
+        <ul class="menu-list">
+            <li><a href="/quiz/index.html" target="_blank">Quiz 1</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <img src="tiktok.webp" alt="TikTok" class="tiktok-icon">
+        <p class="keterangan">Kalian bisa cari tahu lebih lanjut di TikTok dengan mengklik link berikut:</p>
+        <a href="https://www.tiktok.com/@lyzn_id?lang=en" target="_blank" class="link-tiktok">Kunjungi TikTok Kami</a>
+    </div>
+
+    <script>
+        // JavaScript untuk menambahkan efek interaksi atau animasi tambahan jika diperlukan
+        document.querySelectorAll('.menu-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                alert(`Anda memilih ${item.textContent}`);
+            });
+        });
+    </script>
+</body>
+</html>
