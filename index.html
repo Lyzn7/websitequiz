@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        
-            font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
-            background-color: #f0f0f0;
+            background-image: url('desktop.png.jpg'); /* Gambar background */
+            background-size: cover; /* Gambar akan menutupi seluruh layar */
+            background-position: center; /* Posisi gambar di tengah */
+            background-attachment: fixed; /* Membuat gambar tetap di posisi saat scroll */
         }
-        
+
         .container {
             background: #ffffff;
             padding: 20px;
@@ -26,19 +27,23 @@
             max-width: 500px;
             margin: auto;
         }
+
         .tiktok-icon {
             width: 50px;
             margin-bottom: 20px;
         }
+
         .link-tiktok {
             text-decoration: none;
             font-size: 18px;
             color: #000;
             font-weight: bold;
         }
+
         .link-tiktok:hover {
             color: #0088cc;
         }
+
         .keterangan {
             font-size: 14px;
             color: #555;
@@ -103,27 +108,30 @@
         .menu-list::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
+
         a {
             text-decoration: none;
             font-size: 18px;
-            color: #ffffff; /* Teks link tetap putih */
+            color: #ffffff;
             padding: 10px 20px;
             display: inline-block;
-         
             border-radius: 5px;
             font-weight: bold;
             transition: background-color 0.3s;
         }
+
         a:hover {
             background-color: #005f99;
-            color: #ffffff; /* Tetap putih saat di-hover */
+            color: #ffffff;
         }
+
         /* Animasi */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -135,13 +143,14 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Daftar Menu</h1>
     </header>
     <div class="menu-container">
         <ul class="menu-list">
-            <li><a href="https://sfl.gl/pbVwUp6" target="_blank">Quiz 1</a></li>
+            <li><a href="/quiz1/index.html" target="_blank">Quiz 1</a></li>
         </ul>
     </div>
     <div class="container">
@@ -159,4 +168,5 @@
         });
     </script>
 </body>
+
 </html>
