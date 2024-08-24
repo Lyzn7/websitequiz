@@ -3,7 +3,7 @@ document.getElementById('submit-btn').addEventListener('click', function() {
     const popup = document.getElementById('popup');
     const message = document.getElementById('popup-message');
 
-    if (answer.trim().toLowerCase() === "loong") {  // Jawaban yang benar adalah "loong"
+    if (answer.trim().toLowerCase() === "ziya") {  // Jawaban yang benar adalah "loong"
         message.innerHTML = 'Benar! <br> <a href="https://sfl.gl/lF1k57" target="_blank" class="btn btn-success mt-3">buruan klaim hadiahnya</a>';
         message.style.color = "green";
     } else {
