@@ -1,13 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            padding: 50px;
-            background-image: url('mobile.png'); /* Gambar background */
-            background-size: cover; /* Gambar akan menutupi seluruh layar */
-            background-position: center; /* Posisi gambar di tengah */
-            background-attachment: fixed; /* Membuat gambar tetap di posisi saat scroll */
+          
 }
 
 .container {
