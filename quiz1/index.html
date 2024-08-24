@@ -8,13 +8,92 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .question {
+            font-size: 1.1rem;
+            color: #495057;
+        }
+
+        #submit-btn {
+            background-color: #007bff;
+            border: none;
+        }
+
+        #submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: popupAnimation 0.5s ease-in-out;
+        }
+
+        @keyframes popupAnimation {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #close-btn {
+            background-color: #6c757d;
+            border: none;
+        }
+
+        #close-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .tiktok-embed {
+            margin-top: 30px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container text-center mt-5">
         <h1 class="mb-4">Quiz HOK Lyzn</h1>
-        <p class="question">!! ingat kalian harus melewati safelink(iklan) untuk memverifykasi bukan robot <br> kalian bisa cari tau cara lewati safelink di vidio tiktok yang sudah disediakan <br>kaualifikasi dari QUIZ ini adalah yang benar dan tercepat</p>
-        <p class="question">Apakah hero yang saya pakai ?</p>
-        <input type="text" id="answer" class="form-control mb-3" placeholder="Masukkan jawaban Anda">
+        <p class="question">
+            !! Ingat, kalian harus melewati safelink (iklan) untuk memverifikasi bahwa kalian bukan robot.<br>
+            Cari tahu cara melewati safelink di video TikTok yang sudah disediakan.<br>
+            Kualifikasi dari QUIZ ini adalah jawaban yang benar dan tercepat.
+        </p>
+        <p class="question">Apakah hero yang saya pakai?</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="text" id="answer" class="form-control mb-3" placeholder="Masukkan jawaban Anda">
+            </div>
+        </div>
         <button id="submit-btn" class="btn btn-primary">Submit</button>
         <div id="popup" class="popup">
             <div class="popup-content">
@@ -23,16 +102,31 @@
             </div>
         </div>
     </div>
+
     <div class="container text-center mt-5">
-        <h1>cari petunjuk di vidio tiktok dibawah</h1>
+        <h1>Cari petunjuk di video TikTok di bawah</h1>
         <p>Berikut adalah video TikTok yang disematkan di website:</p>
-        
+
         <!-- Embed Video TikTok -->
-        <div class="tiktok-embed" data-video-id="VIDEO_ID" style="max-width: 605px;min-width: 325px;" data-embed-from="oembed" >
-           <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lyzn_id/video/7405891154748722437" data-video-id="7405891154748722437" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@lyzn_id" href="https://www.tiktok.com/@lyzn_id?refer=embed">@lyzn_id</a> quiz1 tebak hero HOK <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a title="honorofkings" target="_blank" href="https://www.tiktok.com/tag/honorofkings?refer=embed">#honorofkings</a> <a title="hok" target="_blank" href="https://www.tiktok.com/tag/hok?refer=embed">#hok</a> <a target="_blank" title="♬ SE TU QUER (Slowed) - Matute Sureda &#38; rodricci &#38; launch13" href="https://www.tiktok.com/music/SE-TU-QUER-Slowed-7382578931779553297?refer=embed">♬ SE TU QUER (Slowed) - Matute Sureda &#38; rodricci &#38; launch13</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script></div>
-    <!-- Bo\\\\\\\\\otstrap and jQuery -->
+        <div class="tiktok-embed" data-video-id="7405891154748722437" style="max-width: 605px; min-width: 325px;" data-embed-from="oembed">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lyzn_id/video/7405891154748722437" data-video-id="7405891154748722437" style="max-width: 605px; min-width: 325px;">
+                <section>
+                    <a target="_blank" title="@lyzn_id" href="https://www.tiktok.com/@lyzn_id?refer=embed">@lyzn_id</a>
+                    quiz1 tebak hero HOK
+                    <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a>
+                    <a title="honorofkings" target="_blank" href="https://www.tiktok.com/tag/honorofkings?refer=embed">#honorofkings</a>
+                    <a title="hok" target="_blank" href="https://www.tiktok.com/tag/hok?refer=embed">#hok</a>
+                    <a target="_blank" title="♬ SE TU QUER (Slowed) - Matute Sureda &#38; rodricci &#38; launch13" href="https://www.tiktok.com/music/SE-TU-QUER-Slowed-7382578931779553297?refer=embed">♬ SE TU QUER (Slowed) - Matute Sureda &#38; rodricci &#38; launch13</a>
+                </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
